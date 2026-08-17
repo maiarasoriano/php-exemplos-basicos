@@ -1,9 +1,8 @@
 <?php
-// Definição dos dados de entrada
+// Variáveis
 $preco = 50.00;
 $quantidade = 5;
 
-// Cálculo do valor total inicial
 $valor_total = $preco * $quantidade;
 
 // Verificação e aplicação do desconto
