@@ -31,5 +31,13 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
         required><br>
         <button type="submit">Entrar</button>
     </form>
+
+    <?php
+        // Exibe a mensagem de erro
+        if (isset($erro)) {
+            echo "<p style='color: red';>$erro</p>";
+        }
+    ?>
+
 </body>
 </html>
