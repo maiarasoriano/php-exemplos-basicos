@@ -12,7 +12,7 @@
         <label for="nome">Nome:</label>
         <input type="text" name="nome" required><br><br>
 
-        <label for="idade">Idad:</label>
+        <label for="idade">Idade:</label>
         <input type="text" name="idade" required><br><br>
 
         <button type="submit">Enviar</button>
@@ -31,12 +31,12 @@ if($_SERVER['REQUEST_METHOD']== 'POST') {
     // Tratativa dos erros por "Status Code"
 
     // Erro por parte do usuário (Faixa 400 - Não preencheu nome ou idade)
-    if($nome == '' || $idade = '') {
+    if($nome == '' || $idade == '') {
         http_response_code(400);
         echo "<h2>Status 400 - Faltou preencher nome ou idade!</h2>";
 
     //Erro por parte do usuário (Faixa 400 - Usuário preencheu errado, por exemplo em vez de: "20" escreveu "vinte")
-    }elseif(!is_numeric($idade)) {
+    }elseif(!ctype_digit(strval($idade))) {
         http_response_code(400);
         echo "<h2>Status 400 - Idade precisa ser um número!</h2>";
 
