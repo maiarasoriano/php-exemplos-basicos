@@ -19,5 +19,23 @@
         <button type="submit">Enviar</button>
 
     </form>
+
+    <!-- Parte da lógica -->
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Recebe os dados
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $mensagem = $_POST['mensagem'];
+
+        // Validação dos campos (Se estão vazios e se e-mail é válido)
+        if (!empty($nome) && !empty($email) && filter_var($email) && filter_var && !empty($mensagem) ) {
+            echo "<p style='color: Darkgreen;'>Feedback enviado com sucesso!</p>";
+        } else {
+            echo "<p style='color: red;'>Preencha todos os campos corretamente!</p>";
+        }
+    }
+    ?>
+
 </body>
 </html>
