@@ -20,3 +20,5 @@ Crie um script PHP para cadastrar produtos. Ele deve ter uma validação para ga
 4.  **💾 Inserção:**
     * Se os dados forem válidos, insira o produto na tabela `produtos` e mostre a mensagem: "Produto cadastrado com sucesso!".
     * Se os dados forem inválidos, mostre uma mensagem de erro específica, como: "Erro: O preço deve ser um número positivo.".
+
+    
