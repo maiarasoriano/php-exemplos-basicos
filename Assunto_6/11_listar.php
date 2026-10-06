@@ -35,7 +35,6 @@ if($result->num_rows > 0) {
 } else {
     echo "Nenhum cliente encontrado";
 }
-
 // Encerra a conexão
 $conn->close();
 ?>
